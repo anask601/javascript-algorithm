@@ -1493,3 +1493,22 @@
 // };
 
 // console.log(string2("  I Am ANAS    KHAN    "));
+
+// (() => {
+//   let x = (y = 10);
+// })();
+
+// console.log(typeof x);
+// console.log(typeof y);
+
+//
+// const value = { number: 10 };
+
+// const multiply = (x = { ...value }) => {
+//   console.log((x.number *= 2));
+// };
+
+// multiply();
+// multiply();
+// multiply(value);
+// multiply(value);
