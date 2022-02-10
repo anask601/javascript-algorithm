@@ -15,6 +15,8 @@ for (let i = 0; i <= 20; i++) {
 }
 ```
 
+## 2
+
 ```jsx
 for (let i = 20; i >= 0; i--) {
   if (i === 0) {
@@ -25,7 +27,7 @@ for (let i = 20; i >= 0; i--) {
 }
 ```
 
-## Usage/Examples
+## 3
 
 ```jsx
 let star = "";
@@ -36,4 +38,15 @@ for (let i = 1; i <= 5; i++) {
   star += "\n";
 }
 console.log(star);
+```
+
+## 4
+
+```jsx
+for (let i = 0; i < 6; i++) {
+  console.log(" * ".repeat(i));
+}
+for (let j = 5; j > 0; j--) {
+  console.log(" * ".repeat(j));
+}
 ```
