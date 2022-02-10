@@ -1,6 +1,6 @@
 # javascript-algorithm
 
-###1 print
+1 print
 
 ```jsx
 const num = [];
@@ -14,5 +14,3 @@ for (let i = 0; i <= 20; i++) {
   }
 }
 ```
-
-[top-up]
