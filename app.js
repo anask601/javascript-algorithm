@@ -1741,3 +1741,6 @@
 
 // console.log(sum(1, 25));
 // console.log(sum(1, 25));
+
+// const arrChecker = (...param) => {};
+// console.log(arrChecker([1, 2], 5, "dd"));

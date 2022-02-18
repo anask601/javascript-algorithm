@@ -50,3 +50,16 @@ for (let j = 5; j > 0; j--) {
   console.log(" * ".repeat(j));
 }
 ```
+
+## 5
+
+```jsx
+let star = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = 5; j > i - 1; j--) {
+    star += "*";
+  }
+  star += "\n";
+}
+console.log(star);
+```
