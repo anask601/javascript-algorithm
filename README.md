@@ -63,3 +63,24 @@ for (let i = 1; i <= 5; i++) {
 }
 console.log(star);
 ```
+
+## 6
+
+```jsx
+const yetNewArr = arr.filter((num) => {
+  if (num % 2 === 0 && num !== 0) {
+    return num;
+  }
+});
+
+console.log(yetNewArr);
+```
+
+## 7
+
+```jsx
+const arr = [4, 5, 39, 1];
+const newArr = arr.sort((a, b) => a - b);
+console.log(arr);
+console.log(newArr);
+```
