@@ -333,42 +333,48 @@ const evenCheck = () => evenNum.every((item) => item % 2 === 0);
 console.log(evenCheck());
 ```
 
-## 11
+## 29
 
 ```jsx
-
-```
-
 const evenNum1 = [1, 2, 3, 4, 5];
 const evenCheck2 = () => evenNum1.some((item) => item % 2 === 0);
 console.log(evenCheck2());
+```
 
+## 30
+
+```jsx
 const removDuplicates = (arr) => {
-const newArr = [];
-arr.forEach((el) => {
-if (newArr.includes(el)) {
-return;
-} else {
-newArr.push(el);
-}
-});
-console.log(newArr);
+  const newArr = [];
+  arr.forEach((el) => {
+    if (newArr.includes(el)) {
+      return;
+    } else {
+      newArr.push(el);
+    }
+  });
+  console.log(newArr);
 };
 removDuplicates([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]);
+```
 
+## 31
+
+```jsx
 const arr = [1, 3, 3, 3, 1, 5, 6, 7, 8, 1];
 const emty = [];
 const filArr = (arr) => {
-arr.filter((item, idx, self) => {
-if (emty.includes(item)) {
-return;
-} else {
-emty.push(item);
-}
-});
-console.log(emty);
+  arr.filter((item, idx, self) => {
+    if (emty.includes(item)) {
+      return;
+    } else {
+      emty.push(item);
+    }
+  });
+  console.log(emty);
 };
 console.log(filArr(arr));
+```
 
 let chars = ["A", "B", "A", "C", "B"];
 
