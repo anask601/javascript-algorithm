@@ -376,82 +376,112 @@ const filArr = (arr) => {
 console.log(filArr(arr));
 ```
 
+## 32
+
+```jsx
 let chars = ["A", "B", "A", "C", "B"];
 
 let dupChars = chars.filter((element, index) => {
-console.log(`${chars.indexOf(element)} ${element} !== ${index} ${element}`);
-return chars.indexOf(element) !== index;
+  console.log(`${chars.indexOf(element)} ${element} !== ${index} ${element}`);
+  return chars.indexOf(element) !== index;
 });
 
 console.log(dupChars);
+```
+
+## 33
+
+```jsx
 let chars = ["A", "B", "A", "C", "B"];
 
 let uniqueChars = [];
 chars.forEach((element) => {
-if (!uniqueChars.includes(element)) {
-uniqueChars.push(element);
-}
+  if (!uniqueChars.includes(element)) {
+    uniqueChars.push(element);
+  }
 });
 
 console.log(uniqueChars);
+```
 
+## 34
+
+```jsx
 const words = ["hello", "hii", "bye", "okay", "lol"];
 let emptyString = "";
 words.forEach((items) => {
-if (items.length > emptyString) {
-emptyString = items;
-}
-return;
+  if (items.length > emptyString) {
+    emptyString = items;
+  }
+  return;
 });
 
 console.log(emptyString.length);
-
 words.forEach((items) => {
-if (items.length > emptyString) {
-emptyString = items;
-}
-return;
+  if (items.length > emptyString) {
+    emptyString = items;
+  }
+  return;
 });
 
 console.log(emptyString.length);
+```
+
+## 35
+
+```jsx
 const words = "hello hii bye okay lol";
 const words2 = words.split(" ");
 console.log(words2);
+```
 
+## 36
+
+```jsx
 let largestWord = "";
 
 const words3 = words2.forEach((item) => {
-if (item.length > largestWord) {
-largestWord = item;
-return largestWord;
-}
+  if (item.length > largestWord) {
+    largestWord = item;
+    return largestWord;
+  }
 });
 console.log(words3);
+```
 
-/_------------------ recursion -------------------------_/
+## 37
+
+```jsx
+/_------------------ recursion ---------------_/;
 function recurse(num) {
-if (num % 2 === 0) {
-console.log(num);
-}
-num++;
-if (num <= 10) {
-recurse(num);
-}
+  if (num % 2 === 0) {
+    console.log(num);
+  }
+  num++;
+  if (num <= 10) {
+    recurse(num);
+  }
 }
 
 recurse(1);
+```
 
+## 38
+
+```jsx
 const someObj = {
-propName: "John",
+  propName: "John",
 };
 
 function propPrefix(str) {
-const s = "prop";
-return s + str;
+  const s = "prop";
+  return s + str;
 }
 
-consropPrefix("Name");(checkProp)
+consropPrefix("Name");
+checkProp;
 console.log(someObj[someProp]);
+```
 
 function checkObj(obj, checkProp) {
 Only change code below this line
