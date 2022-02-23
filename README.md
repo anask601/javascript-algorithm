@@ -595,9 +595,6 @@ console.log(myArray);
 ## 43
 
 ```jsx
-
-```
-
 const ourArray = [];
 
 for (let i = 0; i < 10; i += 2) {
@@ -612,19 +609,30 @@ total += myArr[i];
 console.log(`total = ${total} + ${myArr[i]}`);
 }
 console.log(total);
+
+```
+
+## 44
+
+```jsx
 const arr = [
-[1, 2],
-[3, 4],
-[5, 6],
+  [1, 2],
+  [3, 4],
+  [5, 6],
 ];
 
 for (let i = 0; i < arr.length; i++) {
-console.log(`${i} = ${i}< ${arr.length} for i`);
-for (let j = 0; j < arr[i].length; j++) {
-console.log(`${j} = ${j}< ${arr[i].length} for j`);
-console.log(arr[i][j]);
+  console.log(`${i} = ${i}< ${arr.length} for i`);
+  for (let j = 0; j < arr[i].length; j++) {
+    console.log(`${j} = ${j}< ${arr[i].length} for j`);
+    console.log(arr[i][j]);
+  }
 }
-}
+```
+
+## 45
+
+```jsx
 
 function multiplyAll(arr) {
 let product = 1;
@@ -653,7 +661,12 @@ multiplyAll([
 [3, 9],
 ]);
 
-multipliction
+```
+
+## 46
+
+```jsx
+// multipliction
 
 function multiply(arr, n) {
 if (n <= 0) {
@@ -663,6 +676,12 @@ return multiply(arr, n - 1) \* arr[n - 1];
 }
 }
 console.log(multiply([5, 5, 5], 5));
+
+```
+
+## 47
+
+```jsx
 
 Setup
 const contacts = [
@@ -703,15 +722,26 @@ Only change code above this line
 }
 
 lookUpProfile("Akira", "likes");
+```
 
+## 48
+
+```jsx
 const titleCase = (str) => {
-str
-.trim()
-.split(" ")
-.map((word) => word[0].toUpperCase + word.slice(1))
-.join(" ");
+  str
+    .trim()
+    .split(" ")
+    .map((word) => word[0].toUpperCase + word.slice(1))
+    .join(" ");
 };
 console.log(titleCase(" hello a am faran "));
+```
+
+## 49
+
+```jsx
+
+```
 
 var printNumTwo;
 for (var i = 0; i < 3; i++) {
