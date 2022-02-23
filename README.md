@@ -984,6 +984,9 @@ console.log(row);
 
 ```
 
+## 63
+
+```jsx
 function zeroArray(m, n) {
 let newArray = [];
 Creates a 2-D array with m rows and n columns of zeroes
@@ -1007,12 +1010,21 @@ console.log(row);
 let matrix = zeroArray(3, 2);
 console.log(matrix);
 
-splice
+```
+
+## 64
+
+```jsx
+splice;
 let array = ["today", "was", "not", "so", "great"];
 
 array.splice(2, 2);
 console.log(array);
+```
 
+## 65
+
+```jsx
 let array = ["I", "am", "feeling", "really", "happy"];
 
 let newArray = array.splice(3, 2);
@@ -1030,6 +1042,11 @@ console.log(
 forecast(["cold", "rainy", "warm", "sunny", "cool", "thunderstorms"])
 );
 
+```
+
+## 66
+
+```jsx
 function copyMachine(arr, num) {
 let newArr = [];
 while (num >= 1) {
@@ -1043,6 +1060,11 @@ return newArr;
 
 console.log(copyMachine([true, false, true], 2));
 
+```
+
+## 67
+
+```jsx
 function quickCheck(arr, elem) {
 Only change code below this line
 if (arr.indexOf(elem) >= 0) {
@@ -1055,6 +1077,11 @@ Only change code above this line
 
 console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
 
+```
+
+## 68
+
+```jsx
 function filteredArray(arr, elem) {
 let newArr = [];
 Only change code below this line
@@ -1090,6 +1117,11 @@ filteredArray(
 )
 );
 
+```
+
+## 69
+
+```jsx
 let myNestedArray = [
 Only change code below this line
 ["unshift", false, 1, 2, 3, "complex", "nested"],
@@ -1136,6 +1168,11 @@ Only change code above this line
 
 console.log(isEveryoneHere(users));
 
+```
+
+## 70
+
+```jsx
 const users = {
 Alan: {
 online: false,
@@ -1164,6 +1201,11 @@ Only change code above this line
 
 console.log(countOnline(users));
 
+```
+
+## 71
+
+```jsx
 const users = {
 Alan: {
 online: false,
@@ -1190,6 +1232,11 @@ Only change code above this line
 
 console.log(countOnline(users));
 
+```
+
+## 72
+
+```jsx
 let users = {
 Alan: {
 age: 27,
@@ -1217,6 +1264,11 @@ Only change code above this line
 
 console.log(getArrayOfUsers(users));
 
+```
+
+## 73
+
+```jsx
 let user = {
 name: "Kenneth",
 age: 28,
@@ -1242,6 +1294,11 @@ Only change code above this line
 
 console.log(addFriend(user, "Pete"));
 
+```
+
+## 74
+
+```jsx
 function reverseString(str) {
 return str.trim().split("").reverse().join("");
 }
@@ -1262,34 +1319,44 @@ return product;
 
 console.log(factorialize(0));
 
-function findLongestWordLength(str) {
-let longestLength = "";
-str.split(" ").filter((word, idx, array) => {
-if (word.length > longestLength.length) {
-longestLength = word;
-}
-});
-return longestLength.length;
-}
-console.log(
-findLongestWordLength("The quick brown fox jumped over the lazy dog")
-);
+```
 
-function largestOfFour(arr) {
-let result = [];
-for (let i = 0; i < arr.length; i++) {
-result.push(Math.max(...arr[i]));
-}
-return result;
+## 75
+
+```jsx
+function findLongestWordLength(str) {
+  let longestLength = "";
+  str.split(" ").filter((word, idx, array) => {
+    if (word.length > longestLength.length) {
+      longestLength = word;
+    }
+  });
+  return longestLength.length;
 }
 console.log(
-largestOfFour([
-[4, 5, 1, 3],
-[13, 27, 18, 26],
-[32, 35, 37, 39],
-[1000, 1001, 857, 1],
-])
+  findLongestWordLength("The quick brown fox jumped over the lazy dog")
 );
+```
+
+## 76
+
+```jsx
+function largestOfFour(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(Math.max(...arr[i]));
+  }
+  return result;
+}
+console.log(
+  largestOfFour([
+    [4, 5, 1, 3],
+    [13, 27, 18, 26],
+    [32, 35, 37, 39],
+    [1000, 1001, 857, 1],
+  ])
+);
+```
 
 function confirmEnding(str, target) {
 return str.slice(-target.length) === target;
