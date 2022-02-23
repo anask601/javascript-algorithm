@@ -1358,74 +1358,107 @@ console.log(
 );
 ```
 
+## 77
+
+```jsx
 function confirmEnding(str, target) {
-return str.slice(-target.length) === target;
+  return str.slice(-target.length) === target;
 }
 
 console.log(confirmEnding("Bastian", "n"));
+```
 
+## 78
+
+```jsx
 function repeatStringNumTimes(str, num) {
-return str.repeat(num);
+  return str.repeat(num);
 }
 
 console.log(repeatStringNumTimes("abc", 3));
+```
 
+## 79
+
+```jsx
 function repeatStringNumTimes(str, num) {
-let str2 = "";
-for (let i = 0; i < num; i++) {
-str2 += str;
-}
-return str2;
+  let str2 = "";
+  for (let i = 0; i < num; i++) {
+    str2 += str;
+  }
+  return str2;
 }
 
 console.log(repeatStringNumTimes("abc", 3));
+```
 
+## 80
+
+```jsx
 function findElement(arr, func) {
-let num = 0;
-for (let i = 0; i < arr.length; i++) {
-num = arr[i];
-if (func(num)) {
-return num;
-}
-}
+  let num = 0;
+  for (let i = 0; i < arr.length; i++) {
+    num = arr[i];
+    if (func(num)) {
+      return num;
+    }
+  }
 }
 
 console.log(findElement([1, 2, 3, 4], (num) => num % 2 === 0));
+
 console.log(
-findElement([1, 3, 5, 9], function (num) {
-return num % 2 === 0;
-})
-);
-console.log(
-findElement([1, 3, 5, 8, 9, 10], function (num) {
-return num % 2 === 0;
-})
+  findElement([1, 3, 5, 9], function (num) {
+    return num % 2 === 0;
+  })
 );
 
+console.log(
+  findElement([1, 3, 5, 8, 9, 10], function (num) {
+    return num % 2 === 0;
+  })
+);
+```
+
+## 81
+
+```jsx
 const finder = (num) => num % 2 === 0;
 console.log(finder(4));
+```
 
+## 82
+
+```jsx
 function booWho(bool) {
-if (bool === true || bool === false) {
-return true;
-} else {
-return false;
-}
+  if (bool === true || bool === false) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 console.log(booWho(false));
+```
 
+## 83
+
+```jsx
 function titleCase(str) {
-return str
-.trim()
-.split(" ")
-.map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
-.join(" ");
+  return str
+    .trim()
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
 }
 
 console.log(titleCase("I'm a little tea pot"));
 console.log(titleCase("sHoRt AnD sToUt"));
+```
 
+## 84
+
+```jsx
 function frankenSplice(arr1, arr2, n) {
 let arr3 = [...arr2]
 arr2.splice(n, 0, ...arr1);
@@ -1434,12 +1467,21 @@ retrun arr3;
 
 console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
 
+```
+
+## 85
+
+```jsx
 function bouncer(arr) {
-return arr.filter((word) => word);
+  return arr.filter((word) => word);
 }
 
 bouncer([7, "ate", "", false, 9]);
+```
 
+## 86
+
+```jsx
 function getIndexToIns(arr, num) {
 arr.sort((a, b) => a - b);
 .forEach((ele, idx) => {
@@ -1459,30 +1501,46 @@ return arr.length;
 getIndexToIns([40, 60], 50);
 console.log(getIndexToIns([10, 20, 30, 40, 50], 35));
 
+```
+
+## 87
+
+```jsx
 function chunkArrayInGroups(arr, size) {
-const arr2 = [];
-arr.slice(size);
-return arr2.push(arr2);
+  const arr2 = [];
+  arr.slice(size);
+  return arr2.push(arr2);
 }
 
 console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+```
 
+## 88
+
+```jsx
 function truncateString(str, num) {
-return str.trim().split(" ").slice(0, num).join("...");
-if (str.length > num) {
-return str.slice(0, num) + "...";
-} else {
-return str;
-}
+  return str.trim().split(" ").slice(0, num).join("...");
+  if (str.length > num) {
+    return str.slice(0, num) + "...";
+  } else {
+    return str;
+  }
 }
 
 console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
 console.log(
-truncateString(
-"A-tisket a-tasket A green and yellow basket",
-"A-tisket a-tasket A green and yellow basket".length
-)
+  truncateString(
+    "A-tisket a-tasket A green and yellow basket",
+    "A-tisket a-tasket A green and yellow basket".length
+  )
 );
+```
+
+## 89
+
+```jsx
+
+```
 
 function mutation(arr) {
 let firstString = arr[0].toLowerCase().split("");
