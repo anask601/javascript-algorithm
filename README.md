@@ -740,40 +740,50 @@ console.log(titleCase(" hello a am faran "));
 ## 49
 
 ```jsx
-
-```
-
 var printNumTwo;
 for (var i = 0; i < 3; i++) {
-if (i === 2) {
-printNumTwo = function () {
-return i;
-};
-}
+  if (i === 2) {
+    printNumTwo = function () {
+      return i;
+    };
+  }
 }
 console.log(printNumTwo());
+```
 
+## 50
+
+```jsx
 let printNumTwo;
 for (let i = 0; i < 3; i++) {
-if (i === 2) {
-printNumTwo = function () {
-return i;
-};
-}
+  if (i === 2) {
+    printNumTwo = function () {
+      return i;
+    };
+  }
 }
 console.log(printNumTwo());
 console.log(i);
+```
 
+## 51
+
+```jsx
 function checkScope() {
-let i = "function scope";
-if (true) {
-let i = "block scope";
-console.log("Block scope i is: ", i);
-}
-console.log("Function scope i is: ", i);
-return i;
+  let i = "function scope";
+  if (true) {
+    let i = "block scope";
+    console.log("Block scope i is: ", i);
+  }
+  console.log("Function scope i is: ", i);
+  return i;
 }
 checkScope();
+```
+
+## 52
+
+```jsx
 
 function freezeObj() {
 const MATH_CONSTANTS = {
@@ -797,6 +807,11 @@ return "You have passed " + args.length + " arguments.";
 console.log(howMany(0, 1, 2));
 console.log(howMany("string", null, [1, 2, 3], {}));
 
+```
+
+## 53
+
+```jsx
 function randomRange(myMin, myMax) {
 Only change code below this line
 let high = myMax;
@@ -807,32 +822,51 @@ Only change code above this line
 }
 randomRange(1, 5);
 
+```
+
+## 54
+
+```jsx
 function checkSign(num) {
-return num ? "positive" : !num ? "negative" : "zero";
+  return num ? "positive" : !num ? "negative" : "zero";
 }
 
 checkSign(-12);
+```
 
+## 55
+
+```jsx
 function countup(n) {
-if (n < 1) {
-return [];
-} else {
-const countArray = countup(n - 1);
-countArray.unshift(n);
-return countArray;
-}
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countup(n - 1);
+    countArray.unshift(n);
+    return countArray;
+  }
 }
 console.log(countup(5));
+```
+
+## 56
+
+```jsx
 function rangeOfNumbers(startNum, endNum) {
-if (startNum - endNum === 0) {
-return [startNum];
-} else {
-const arr = rangeOfNumbers(startNum, endNum - 1);
-arr.push(endNum);
-return arr;
-}
+  if (startNum - endNum === 0) {
+    return [startNum];
+  } else {
+    const arr = rangeOfNumbers(startNum, endNum - 1);
+    arr.push(endNum);
+    return arr;
+  }
 }
 console.log(rangeOfNumbers(1, 5));
+```
+
+## 57
+
+```jsx
 
 const stats = {
 max: 56.78,
@@ -849,7 +883,11 @@ const { max, min } = stats;
 stats = (max + min) / 2.0;
 };
 half(stats);
+```
 
+## 58
+
+```jsx
 const createPerson = (name, age, gender) =>
 Only change code below this line
 ({
@@ -872,44 +910,21 @@ Only change code above this line
 bicycle.setGear(3);
 console.log(bicycle.gear);
 
+```
+
+## 59
+
+```jsx
 var SpaceShuttle = function (targetPlanet) {
-this.targetPlanet = targetPlanet;
+  this.targetPlanet = targetPlanet;
 };
 var zeus = new SpaceShuttle("Jupiter");
 console.log(zeus);
+```
 
-Only change code below this line
-class Vegetable {
-constructor(name) {
-this.name = name;
-}
-}
-Only change code above this line
+## 60
 
-const carrot = new Vegetable("carrot");
-console.log(carrot.name); Should display 'carrot'
-
-Only change code below this line
-class Thermostat {
-constructor(Fahrenheit) {
-this.Fahrenheit = Fahrenheit;
-}
-getter
-get temperature() {
-return this.Celsius;
-}
-setter
-set temperature(updatedAuthor) {
-this.\_author = updatedAuthor;
-}
-}
-Only change code above this line
-
-const thermos = new Thermostat(76); Setting in Fahrenheit scale
-let temp = thermos.temperature; 24.44 in Celsius
-thermos.temperature = 26;
-temp = thermos.temperature; 26 in Celsius
-
+```jsx
 const makeServerRequest = new Promise((resolve, reject) => {});
 
 const makeServerRequest = new Promise((resolve, reject) => {
@@ -923,6 +938,14 @@ reject("Data not received"); Change this line
 }
 });
 console.log(makeServerRequest);
+
+```
+
+## 39
+
+```jsx
+
+```
 
 let alphabet = "abcdefghijklmnopqrstuvwxyz";
 let len = alphabet.length;
