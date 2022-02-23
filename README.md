@@ -941,25 +941,26 @@ console.log(makeServerRequest);
 
 ```
 
-## 39
+## 61
 
 ```jsx
-
-```
-
 let alphabet = "abcdefghijklmnopqrstuvwxyz";
 let len = alphabet.length;
 console.log(alphabet.length);
 for (let i = 0; i <= len; i++) {
-console.log(`${alphabet[i]}=>${i}`);
+  console.log(`${alphabet[i]}=>${i}`);
 }
 for (let j = 1; j < len; j++) {
-console.log(alphabet[j]);
+  console.log(alphabet[j]);
 }
 for (let k = 0; k < len; k++) {
-console.log(alphabet[k]);
+  console.log(alphabet[k]);
 }
+```
 
+## 62
+
+```jsx
 let newArray = [];
 let row = [];
 function zeroArray(m, n) {
@@ -980,6 +981,8 @@ return newArray;
 zeroArray(5, 5);
 console.log(newArray);
 console.log(row);
+
+```
 
 function zeroArray(m, n) {
 let newArray = [];
