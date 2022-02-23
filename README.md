@@ -483,6 +483,9 @@ checkProp;
 console.log(someObj[someProp]);
 ```
 
+## 39
+
+```jsx
 function checkObj(obj, checkProp) {
 Only change code below this line
 if (obj.hasOwnProperty(checkProp)) {
@@ -505,20 +508,30 @@ city: "Seattle",
 )
 );
 
+```
+
+## 40
+
+```jsx
 const myStorage = {
-car: {
-inside: {
-"glove box": "maps",
-"passenger seat": "crumbs",
-},
-outside: {
-trunk: "jack",
-},
-},
+  car: {
+    inside: {
+      "glove box": "maps",
+      "passenger seat": "crumbs",
+    },
+    outside: {
+      trunk: "jack",
+    },
+  },
 };
 
 const gloveBoxContents = myStorage.car.inside["glove box"];
 console.log(gloveBoxContents);
+```
+
+## 41
+
+```jsx
 
 Setup
 const recordCollection = {
@@ -561,6 +574,11 @@ console.log(updateRecords(recordCollection, 5439, "artist", "ABBA"));
 console.log(
 updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me")
 );
+```
+
+## 42
+
+```jsx
 const myArray = [];
 
 Only change code below this line
@@ -571,6 +589,14 @@ myArray.push(i);
 i--;
 }
 console.log(myArray);
+
+```
+
+## 43
+
+```jsx
+
+```
 
 const ourArray = [];
 
