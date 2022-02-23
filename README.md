@@ -273,45 +273,71 @@ const arr = (num, sum) =>
 console.log(arr(1));
 ```
 
-const sum = () =>
-Array(10)
-.fill()
-.reduce((perVal, curVal, idx) => {
-return perVal + ++idx;
-}, 0);
-console.log(sum(1));
+## 24
 
-[5,7,9,6,20]
-[5, 7, 9, 6, 20];
+```jsx
+const sum = () =>
+  Array(10)
+    .fill()
+    .reduce((perVal, curVal, idx) => {
+      return perVal + ++idx;
+    }, 0);
+console.log(sum(1));
+```
+
+## 25
+
+```jsx
+// [5,7,9,6,20]
+// [5, 7, 9, 6, 20];
 const sum2 = () => {
-const arr2 = [5, 7, 9, 6, 20].reduce(
-(perVal, currVal) => perVal + currVal,
-0
-);
-console.log(arr2);
+  const arr2 = [5, 7, 9, 6, 20].reduce(
+    (perVal, currVal) => perVal + currVal,
+    0
+  );
+  console.log(arr2);
 };
 sum2();
+```
 
+## 26
+
+```jsx
 const arr3 = [1, 3, 3, 3, 1, 5, 6, 7, 8, 1];
 const DuplicateRemove = [...new Set(arr3)];
 console.log(DuplicateRemove);
+```
 
+## 27
+
+```jsx
 const arr3 = [];
 const duplicateRemove = (arr) =>
-arr.filter((num, idx, self) => self.indexOf(num) == idx);
+  arr.filter((num, idx, self) => self.indexOf(num) == idx);
 
 console.log(duplicateRemove([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]));
+```
 
-[2,4,6,8,10] even condition checking
-[1,2,3,4,5] even condition checking
+## 28
 
-[0 1 2 3 4 5 6 7 8 9]
-[1, 3, 3, 3, 1, 5, 6, 7, 8, 1]
-[0 1 2 3 4 5 6 7 8 9]
+```jsx
+// [2,4,6,8,10] even condition checking
+// [1,2,3,4,5] even condition checking
+
+// [0 1 2 3 4 5 6 7 8 9]
+// [1, 3, 3, 3, 1, 5, 6, 7, 8, 1]
+// [0 1 2 3 4 5 6 7 8 9]
 
 const evenNum = [2, 4, 6, 8, 10];
 const evenCheck = () => evenNum.every((item) => item % 2 === 0);
 console.log(evenCheck());
+```
+
+## 11
+
+```jsx
+
+```
 
 const evenNum1 = [1, 2, 3, 4, 5];
 const evenCheck2 = () => evenNum1.some((item) => item % 2 === 0);
