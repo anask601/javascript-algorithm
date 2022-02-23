@@ -1696,142 +1696,152 @@ const isInt = (num) => {
 console.log(10.33);
 ```
 
+## 98
+
+```jsx
 const arr = (arr2) =>
 arr2.filter((num) => num % 1 === 0 && num >= 0).map((ele) => ele \* ele);
 
 console.log(arr([-4.3, 3, 5, -7, 5.6, 7.8, 9, 6, -3.4]));
 
+```
+
+## 99
+
+```jsx
+const obj = {
+  name: "nasir",
+  age: 23,
+  city: "kalyan",
+};
+
+for (let key in obj) {
+  console.log(`${key}: ${obj[key]}`);
+}
+```
+
+## 100
+
+```jsx
+const obj = {
+  info: {
+    name: "nasir",
+    age: 23,
+    gender: "female",
+    college: "mhssp",
+  },
+  location: {
+    city: "kalyan",
+    district: "thane",
+    state: "maharashtra",
+  },
+};
+
+// for (let key in obj) {
+// for (let key2 in obj[key]) {
+// console.log(`key in ${key} : ${obj[key][key2]}`);
+// }
+// }
+
+// solution 1
+for (let [keys, values] of Object.entries(obj)) {
+  let i = 1;
+  for (let [key, val] of Object.entries(values)) {
+    console.log(`${i} key in ${keys} is "${key} : ${val}"`);
+    i++;
+  }
+}
+
+// solution 2
+for (let keys in obj) {
+  let i = 1;
+  for (let key in obj[keys]) {
+    console.log(`${i} key in ${keys} is "${key} : ${obj[keys][key]}"`);
+    i++;
+  }
+}
+```
+
 console.log(min([2, 4, 0, 9, 0, 0, 7, 2, 1, 4, 7, 9, 0, 8, 4]));
 
-const obj = {
-name: "nasir",
-age: 23,
-city: "kalyan",
-};
+## 101
 
-for (let key in obj) {
-console.log(`${key}: ${obj[key]}`);
-}
-
-const obj = {
-info: {
-name: "nasir",
-age: 23,
-gender: "female",
-college: "mhssp",
-},
-location: {
-city: "kalyan",
-district: "thane",
-state: "maharashtra",
-},
-};
-
-for (let key in obj) {
-for (let key2 in obj[key]) {
-console.log(`key in ${key} : ${obj[key][key2]}`);
-}
-}
-
-for (let [keys, values] of Object.entries(obj)) {
-let i = 1;
-for (let [key, val] of Object.entries(values)) {
-console.log(`${i} key in ${keys} is "${key} : ${val}"`);
-i++;
-}
-}
-for (let keys in obj) {
-let i = 1;
-for (let key in obj[keys]) {
-console.log(`${i} key in ${keys} is "${key} : ${obj[keys][key]}"`);
-i++;
-}
-}
-
+```jsx
 const matches = (obj1, obj2) =>
-Object.keys(obj2).every((key) => obj1[key] === obj2[key]);
+  Object.keys(obj2).every((key) => obj1[key] === obj2[key]);
 
 console.log(matches({ id: 101, name: "test2" }, { id: 101, name: "test2" }));
+```
 
+## 102
+
+```jsx
 const emp1 = {
-id: 1,
-name: "test1",
-address: {
-city: "Mumbai",
-street: {
-name: "LoL street",
-houseNo: 25,
-},
-},
+  id: 1,
+  name: "test1",
+  address: {
+    city: "Mumbai",
+    street: {
+      name: "LoL street",
+      houseNo: 25,
+    },
+  },
 };
 
 const emp2 = {
-id: 1,
-name: "test1",
-address: {
-city: "Mumbai",
-street: {
-name: "LoL street",
-houseNo: 5,
-},
-},
+  id: 1,
+  name: "test1",
+  address: {
+    city: "Mumbai",
+    street: {
+      name: "LoL street",
+      houseNo: 5,
+    },
+  },
 };
 
 let result = false;
 for (let key in emp2) {
-if (emp1.hasOwnProperty(key)) {
-if (typeof emp2[key] === "object") {
-for (let keys in emp2[key]) {
-if (typeof emp2[key][keys] === "object") {
-for (let nestedKey in emp2[key][keys]) {
-if (emp1[key][keys][nestedKey] === emp2[key][keys][nestedKey]) {
-result = true;
-} else {
-result = false;
-}
-}
-} else if (emp2[key][keys] === emp1[key][keys]) {
-result = true;
-} else {
-result = false;
-}
-}
-} else if (emp1[key] === emp2[key]) {
-result = true;
-} else {
-result = false;
-}
-} else {
-result = false;
-}
+  if (emp1.hasOwnProperty(key)) {
+    if (typeof emp2[key] === "object") {
+      for (let keys in emp2[key]) {
+        if (typeof emp2[key][keys] === "object") {
+          for (let nestedKey in emp2[key][keys]) {
+            if (emp1[key][keys][nestedKey] === emp2[key][keys][nestedKey]) {
+              result = true;
+            } else {
+              result = false;
+            }
+          }
+        } else if (emp2[key][keys] === emp1[key][keys]) {
+          result = true;
+        } else {
+          result = false;
+        }
+      }
+    } else if (emp1[key] === emp2[key]) {
+      result = true;
+    } else {
+      result = false;
+    }
+  } else {
+    result = false;
+  }
 }
 console.log(result);
+```
 
-for (let i = 0; i < 10; i++) {
-console.log(`fisrt i = ${i}`);
-for (let j = 0; (j = 5); j++) {
-console.log(`fisrt j = ${j}`);
-console.log("fisrt j");
-break;
-}
-}
+## 103
 
-let arr = [1, 2, 3, 4, 5, { id: "anas" }, "string"];
-
-arr.forEach((ele) => {
-if (typeof ele === "object") {
-return console.log(ele);
-} else if (typeof ele === "string") {
-return console.log(ele);
-} else {
-console.log(ele);
-}
-});
-
+```jsx
 let arr = [1, 5, 5, 5, 10];
 const sumOfArr = arr.reduce((perVal, currVal) => perVal + currVal, 0);
 console.log(sumOfArr);
+```
 
+## 104
+
+```jsx
 const str2 = "hello 1 js 2 es5, es6, es7 react ninjas";
 let obj = {};
 const countChars = (str) =>
@@ -1844,37 +1854,34 @@ str
 countChars(str2);
 console.log(obj);
 
-forEach((ele) =>
-{
-obj[ele] = obj[ele] || 0 + 1;
-});
+// forEach((ele) =>
+// {
+// obj[ele] = obj[ele] || 0 + 1;
+// });
 
-str.split("").map((ele) => ({
-ele: ele,
-}));
+// str.split("").map((ele) => ({
+// ele: ele,
+// }));
 
-console.log(obj);
-{
-a: 2,
-c:1,
-e:5,
-..
-..
-}
+// console.log(obj);
+// {
+// a: 2,
+// c:1,
+// e:5,
+// ..
+// ..
+// }
+
+```
+
+## 105
+
+```jsx
 const input = "hello 1 js 2 es5, es6, es7 react ninjas";
 const countChars = (str) => {
-console.log(
-str.split("").filter((char) => char !== " " && char !== "," && isNaN(+char))
-);
+  console.log(
+    str.split("").filter((char) => char !== " " && char !== "," && isNaN(+char))
+  );
 };
 countChars(input);
-
-const sum = (a, b) => {
-return a + b;
-};
-
-console.log(sum(1, 25));
-console.log(sum(1, 25));
-
-const arrChecker = (...param) => {};
-console.log(arrChecker([1, 2], 5, "dd"));
+```
