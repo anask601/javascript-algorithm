@@ -1885,3 +1885,115 @@ const countChars = (str) => {
 };
 countChars(input);
 ```
+
+## 106
+
+```jsx
+const num = [];
+for (let i = 0; i <= 20; i++) {
+  if (i === 0) {
+    continue;
+  }
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}
+```
+
+## 107
+
+```jsx
+for (let i = 20; i >= 0; i--) {
+  if (i === 0) {
+    continue;
+  }
+  console.log(i);
+  console.log("\n");
+}
+```
+
+## 108
+
+```jsx
+let star = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = 0; j < i; j++) {
+    star += "*";
+  }
+  star += "\n";
+}
+console.log(star);
+```
+
+## 108
+
+```jsx
+for (let i = 0; i < 6; i++) {
+  console.log(" * ".repeat(i));
+}
+for (let j = 5; j > 0; j--) {
+  console.log(" * ".repeat(j));
+}
+```
+
+## 109
+
+```jsx
+let star = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = 5; j > i - 1; j--) {
+    star += "*";
+  }
+  star += "\n";
+}
+console.log(star);
+
+//  *
+//  **
+//  ***
+//  ****
+//  *****
+```
+
+## 110
+
+```jsx
+function factorialize(num) {
+  for (let i = 0; i <= num; i++) {
+    if (num >= 0) {
+      num *= num;
+    }
+  }
+  return num;
+}
+
+console.log(factorialize(5));
+```
+
+## 111
+
+```jsx
+const square = [];
+for (let i = 0; i <= 100; i++) {
+  //   console.log(i);
+  square.push(i);
+}
+// console.log(square);
+const newSquare = square.filter((num) => {
+  return num % 2 === 1; // for odd numbers
+  return num % 2 === 0; // for even numbers
+  for (let i = 0; i < square.length; i++) {
+    return num % 2 === 1;
+  }
+  for (let i = 2; i * i <= num; i++) {
+    // console.log(`${i} * ${i} <= ${num}`);
+    if (num % i === 0) {
+      return false;
+    }
+    // console.log(`${i} * ${i} <= ${num}`);
+  }
+  return num > 1;
+});
+console.log(newSquare);
+// 1 ,3 5 7 11 13 17 19
+```
