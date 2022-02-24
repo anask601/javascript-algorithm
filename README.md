@@ -1997,3 +1997,374 @@ const newSquare = square.filter((num) => {
 console.log(newSquare);
 // 1 ,3 5 7 11 13 17 19
 ```
+
+## 112
+
+```jsx
+function x() {
+  for (var i = 1; i <= 5; i++) {
+    (function (i) {
+      setTimeout(function () {
+        console.log(i);
+      }, i * 1000);
+    })(i);
+  }
+}
+x();
+```
+
+## 113 Anagram
+
+```jsx
+String.prototype.sortedString = (str) => {
+  return str.split("").sort().join("");
+};
+
+const anagram = (str1, str2) =>
+  str1.split("").sort().join("") === str2.split("").sort().join("");
+
+console.log(anagram("india", "nidia"));
+
+// String a= “india”
+// String b= “nidia”
+
+// String a= “hackathon”
+// String b= “achcthoon”
+```
+
+## 114
+
+```jsx
+const user = {
+  name: "test",
+};
+user.address.street;
+user?.address.street;
+user.address?.street;
+user?.address?.street;
+```
+
+## 115
+
+```jsx
+const obj = {
+  a: 1,
+  b: 2,
+  a: -1,
+};
+console.log(Object.values(obj));
+```
+
+## 116
+
+```jsx
+"use strict";
+const user = {
+  name: "foo",
+  pr,
+};
+
+let a = 3,
+  b = 2,
+  c = 3;
+[a, b, c] = [b, a];
+console.log(a, b, c);
+```
+
+## 117
+
+```jsx
+const obj = { foo: 2, bar: 4 };
+const entries = Object.entries(obj)
+  .map((e) => [e[0], e[1] * 2])
+  .map((e) => [e[1], e[0] + 1]);
+console.log(entries);
+```
+
+## 118
+
+```jsx
+function generateCounter() {
+  let count = 0;
+  return function () {
+    return count++;
+  };
+}
+const inst1 = generateCounter();
+const inst2 = generateCounter();
+
+console.log(inst1(), inst1());
+console.log(inst2(), inst2());
+```
+
+## 119
+
+```jsx
+const test = function () {
+  let count = 0;
+  return function () {
+    console.log(count++);
+  };
+};
+const test1 = test;
+const test2 = test;
+test();
+test1();
+test2();
+```
+
+## 120
+
+```jsx
+const words = ["hello", "hii", "bye", "okay", "lol"];
+
+let largestword = "";
+
+words.forEach((word) => {
+  if (word.length > largestword.length) {
+    largestword = word;
+  }
+  return;
+});
+console.log(largestword.length);
+```
+
+## 121
+
+```jsx
+const words = "hello hii bye okay lol";
+const words2 = words.split(" ");
+console.log(words2);
+let largestWord = "";
+words2.forEach((item) => {
+  if (item.length > largestWord) {
+    largestWord = item;
+  }
+  return;
+});
+console.log(largestWord);
+```
+
+## 122
+
+```jsx
+const string = (str) => {
+  return str
+    .split(" ")
+    .map((word) => word.toLowerCase())
+    .join("-");
+};
+
+console.log(string("I Am Anas Khan"));
+```
+
+## 123
+
+```jsx
+const string2 = (str) => {
+  return str
+    .trim()
+    .split(" ")
+    .filter((word) => word)
+    .join("-")
+    .toLowerCase();
+};
+
+console.log(string2(" I Am ANAS KHAN "));
+```
+
+## 124
+
+```jsx
+const string2 = (str) => {
+  return str
+    .trim()
+    .split(" ")
+    .filter((word) => word)
+    .join()
+    .toLowerCase();
+};
+```
+
+## 125
+
+```jsx
+const removDuplicates = (arr) => {
+  const newArr = [];
+  arr.forEach((el) => {
+    if (newArr.includes(el)) {
+      return;
+    } else {
+      newArr.push(el);
+    }
+  });
+  console.log(newArr);
+};
+removDuplicates([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]);
+```
+
+## 126
+
+```jsx
+const removDuplicates = (arr) => {
+  arr.forEach((el, idx, array) => {
+    if (array[idx] !== idx) {
+      return;
+    }
+    console.log(el);
+  });
+};
+
+removDuplicates([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]);
+```
+
+## 127
+
+```jsx
+function table(num) {
+const resArr = Array(10)
+.fill("")
+// .map((nums, index) => index + 1)
+.map((el, idx) => el \* num);
+console.log(resArr);
+}
+table(5);
+
+```
+
+## 128
+
+```jsx
+function reverseString(str) {
+  let arr = [];
+  for (let i = 0; i < str.length; i++) {
+    arr.unshift(str[i]);
+  }
+  str = arr.join(",").toString();
+  console.log(str);
+  return str;
+}
+
+reverseString("hello world");
+```
+
+## 129
+
+```jsx
+function findLongestWordLength(str) {
+  let arr = str.split(" ");
+  arr.forEach((word) => word.length > "");
+  console.log(arr);
+  // return str.length;
+}
+
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+```
+
+## 130
+
+```jsx
+function repeatStringNumTimes(str, num) {
+  let repeatedStr = "";
+  for (let i = 0; i < num; i++) {
+    repeatedStr += str;
+  }
+}
+
+repeatStringNumTimes("abc", 3);
+```
+
+## 131
+
+```jsx
+function repeatStringNumTimes(str, num) {
+if (num > 0){
+let repeatedStr = "";
+for ( let i = 0; i < num; i++){
+repeatedStr += str
+}
+return repeatedStr
+}
+else {
+return "";
+}
+}
+}
+
+repeatStringNumTimes("abc", 3);
+
+```
+
+## 132
+
+```jsx
+const sizeOfMinValue = (array) => {
+  let minVal = Math.min(...array);
+  const legthOfMin = array.filter((num) => num === minVal);
+  return legthOfMin.length;
+};
+
+console.log(sizeOfMinValue([2, 4, 0, 9, 0, 0, 7, 2, 1, 4, 7, 9, 0, 8, 4]));
+```
+
+## 133
+
+```jsx
+const entriesOfCharc = charcArray.reduce((preVal, currval) => {
+  preVal[currval] = preVal[currval] ? preVal[currval] + 1 : 1;
+  return preVal;
+}, {});
+return entriesOfCharc;
+```
+
+## 134
+
+```jsx
+const isintg = (number) => (number % 1 === 0 ? true : false);
+console.log(isintg(4.3));
+
+const isintg = (num) => (String(num).includes(".") ? false : true);
+console.log(isintg(4.3));
+```
+
+## 135
+
+```jsx
+const array = [1, 3, 3, 3, 1, 5, 6, 7, 8, 1];
+console.log(array);
+function filteredArray() {
+const newArray = array.filter((numbers, indx, arr) => {
+return arr.indexOf(numbers) = indx;
+});
+console.log(newArray)
+}
+filteredArray()
+
+```
+
+## 136
+
+```jsx
+const arr = [5, 7, 9, 6, 20].reduce(
+  (preValue, currentValue) => preValue + currentValue,
+  10
+);
+console.log(arr);
+```
+
+## 137
+
+```jsx
+const numbers = [2, 3, 5, 7, 9, 4, 6, 1, 8];
+console.log(numbers);
+const SortedNumbers = numbers.sort((a, b) => {
+  if (a > b) {
+    return 1;
+  } else if (a === b) {
+    return 0;
+  } else {
+    return -1;
+  }
+});
+console.log(SortedNumbers);
+```
