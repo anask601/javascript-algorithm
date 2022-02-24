@@ -1,6 +1,14 @@
 # javascript-algorithm
 
-1 print 20 event no. not start from zero
+## Table of Contents
+
+- [1 print 20 event no. not start from zero](#1-print-20-event-no-not-start-from-zero1)
+- [2](#2)
+- [3](#3)
+- [4](#4)
+- [5](#5)
+
+## 1 print 20 event no. not start from zero
 
 ```jsx
 const num = [];
