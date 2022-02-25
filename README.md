@@ -2984,4 +2984,30 @@ console.log(reversInt(-900));
 console.log(reversInt(00));
 console.log(reversInt(001));
 ```
+## 158 MaxChars 
 // MaxChars
+```jsx
+const str2 = "hello 1 js 2 es5, es6, es7 react ninjas";
+let obj = {};
+let max = 0;
+let maxChar = "";
+const countChars = (str) => {
+  str
+    .split("")
+    .filter((char) => char !== " " && char !== "," && isNaN(+char))
+    .forEach((ele) => (obj[ele] = obj[ele] + 1 || 1));
+
+  for (let char in obj) {
+    if (obj[char] > max) {
+      max = obj[char];
+      maxChar = char;
+    }
+  }
+  return maxChar;
+};
+countChars(str2);
+console.log(obj); 
+console.log(max);
+console.log(maxChar);
+
+```
