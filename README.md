@@ -2942,3 +2942,46 @@ const checkStringsAnagram = (str1, str2) => {
 };
 checkStringsAnagram("Mary", "Army");
 ```
+## 156 palindrom
+```jsx
+// solution 1
+const palindrome = (str) => {
+  return str.split("").reverse().join("") === str;
+};
+console.log(palindrome("abba"));
+console.log(palindrome("adhdjbba"));
+console.log(palindrome("anas"));
+console.log(palindrome("abcba"));
+```
+```jsx
+// solution 2
+const palindromeTwo = (str) => {
+  return str.split("").every((word, idx) => {
+    return word === str[str.length - idx - 1];
+  });
+};
+console.log(palindromeTwo("abba"));
+console.log(palindromeTwo("adhdjbba"));
+console.log(palindromeTwo("anas"));
+console.log(palindromeTwo("abcba"));
+```
+## 157 integer reversal 
+```jsx
+// integer reversal
+const reversInt = (num) => {
+  let reversNum = num.toString().split("").reverse().join("");
+  if (num < 0) {
+    return parseInt(reversNum) * -1;
+  }
+  return parseInt(reversNum);
+};
+console.log(reversInt(150));
+console.log(reversInt(-1));
+console.log(reversInt(-17));
+console.log(reversInt(150));
+console.log(reversInt(500));
+console.log(reversInt(-900));
+console.log(reversInt(00));
+console.log(reversInt(001));
+```
+// MaxChars
