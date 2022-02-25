@@ -2895,3 +2895,17 @@ const withoutReverse = (str) => {
 }
 console.log(withoutReverse("India is my country"));
 ```
+## 155 
+
+```jsx
+const checkStringsAnagram = (str1, str2) => {
+  let str3 = str1.toLowerCase().split("").sort().join("");
+  let str4 = str2.toLowerCase().split("").sort().join("");
+  if (str3 === str4) {
+    console.log("True");
+  } else {
+    console.log("False");
+  }
+};
+checkStringsAnagram("Mary", "Army");
+```
