@@ -2890,12 +2890,45 @@ console.log(removeDuplicates("India is my country"));
 ## 154 String reverse with reversing of individual words
 
 ```jsx
+// solution 1
 const withoutReverse = (str) => {
   return str.split('').reverse().join('')
 }
 console.log(withoutReverse("India is my country"));
 ```
-## 155 
+```jsx
+// solution 2
+const reverseTwo = (str) => {
+  let reversed = "";
+  for (let i = 0; i < str.length; i++) {
+    reversed = str[i] + reversed;
+  }
+  return reversed;
+};
+console.log(reverseTwo("hey my name is anas"));
+```
+```jsx
+// solution 3
+const reverse = (str) => {
+  let reversed = "";
+  for (let char of str){
+reversed = char + reversed;
+  }
+return reversed
+}
+console.log(reverse("khan"))
+```
+```jsx
+// solution 3
+const reverseThree = (str) => {
+  return str.split("").reduce((inWord, preWord) => {
+    return preWord + inWord;
+  }, "");
+};
+console.log(reverseThree("hey my name is anas"));
+```
+
+## 155 Anagram
 
 ```jsx
 const checkStringsAnagram = (str1, str2) => {
