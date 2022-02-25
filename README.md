@@ -2861,7 +2861,7 @@ console.log(str);
     ***
      *
 ```
-## 151 factorial sum
+## 151 factorial product of any number
 ```jsx
 const numHandler = (num) => {
   let fact = 1;
@@ -2871,5 +2871,27 @@ const numHandler = (num) => {
   return fact;
 };
 console.log(numHandler(5));
+```
+## 152 Remove Duplicate characters from String 
+```jsx
+const removeDuplicateCharacters = (str) => {
+return str.split('').filter((item, index, arr)=> arr.indexOf(item) === index).join('');
+}
+console.log(removeDuplicateCharacters('hey there its anas'));
+```
+## 153 String reverse without reversing of individual words (Array of elements can be reverse with reverse() method but for string it is won't possible so required to split and then join().
 
+```jsx
+const removeDuplicates = (str) => {
+  return str.split("").reverse().join("").split(" ").reverse().join(" ");
+}
+console.log(removeDuplicates("India is my country"));
+```
+## 154 String reverse with reversing of individual words
+
+```jsx
+const withoutReverse = (str) => {
+  return str.split('').reverse().join('')
+}
+console.log(withoutReverse("India is my country"));
 ```
