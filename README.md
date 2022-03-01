@@ -1933,7 +1933,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(star);
 ```
 
-## 108
+## 108 one line method for star pattern in repeat
 
 ```jsx
 for (let i = 0; i < 6; i++) {
