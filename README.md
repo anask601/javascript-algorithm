@@ -1304,8 +1304,8 @@ console.log(addFriend(user, "Pete"));
 
 ```
 
-## 74
-
+## 74 Reverse string simple solution using built in methods
+ 
 ```jsx
 function reverseString(str) {
 return str.trim().split("").reverse().join("");
@@ -2240,7 +2240,7 @@ table(5);
 
 ```
 
-## 128
+## 128 Reverse String 
 
 ```jsx
 function reverseString(str) {
