@@ -1674,7 +1674,7 @@ const obj3 = obj.every((person) => {
 console.log(obj3);
 ```
 
-## 96
+## 96 Reverse  + reverse string $ remove middle space between strings characters 
 
 ```jsx
 const reverseSent = (str) => {
