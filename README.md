@@ -1963,7 +1963,7 @@ console.log(star);
 //  *****
 ```
 
-## 110
+## 110 Another method for factorial
 
 ```jsx
 function factorialize(num) {
