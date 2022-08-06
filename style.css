@@ -4,3 +4,8 @@
   box-sizing: border-box;
   background-color: #333;
 }
+
+div {
+  color: #fff;
+  margin: 2rem 0 0 2rem;
+}

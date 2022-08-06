@@ -1308,7 +1308,7 @@ console.log(addFriend(user, "Pete"));
 ```
 
 ## 74 Reverse string simple solution using built in methods
- 
+
 ```jsx
 function reverseString(str) {
 return str.trim().split("").reverse().join("");
@@ -1677,7 +1677,7 @@ const obj3 = obj.every((person) => {
 console.log(obj3);
 ```
 
-## 96 Reverse  + reverse string $ remove middle space between strings characters 
+## 96 Reverse + reverse string $ remove middle space between strings characters
 
 ```jsx
 const reverseSent = (str) => {
@@ -2243,7 +2243,7 @@ table(5);
 
 ```
 
-## 128 Reverse String 
+## 128 Reverse String
 
 ```jsx
 function reverseString(str) {
@@ -2864,7 +2864,9 @@ console.log(str);
     ***
      *
 ```
+
 ## 151 factorial product of any number
+
 ```jsx
 const numHandler = (num) => {
   let fact = 1;
@@ -2875,30 +2877,38 @@ const numHandler = (num) => {
 };
 console.log(numHandler(5));
 ```
-## 152 Remove Duplicate characters from String 
+
+## 152 Remove Duplicate characters from String
+
 ```jsx
 const removeDuplicateCharacters = (str) => {
-return str.split('').filter((item, index, arr)=> arr.indexOf(item) === index).join('');
-}
-console.log(removeDuplicateCharacters('hey there its anas'));
+  return str
+    .split("")
+    .filter((item, index, arr) => arr.indexOf(item) === index)
+    .join("");
+};
+console.log(removeDuplicateCharacters("hey there its anas"));
 ```
+
 ## 153 String reverse without reversing of individual words (Array of elements can be reverse with reverse() method but for string it is won't possible so required to split and then join().
 
 ```jsx
 const removeDuplicates = (str) => {
   return str.split("").reverse().join("").split(" ").reverse().join(" ");
-}
+};
 console.log(removeDuplicates("India is my country"));
 ```
+
 ## 154 String reverse with reversing of individual words
 
 ```jsx
 // solution 1
 const withoutReverse = (str) => {
-  return str.split('').reverse().join('')
-}
+  return str.split("").reverse().join("");
+};
 console.log(withoutReverse("India is my country"));
 ```
+
 ```jsx
 // solution 2
 const reverseTwo = (str) => {
@@ -2910,17 +2920,19 @@ const reverseTwo = (str) => {
 };
 console.log(reverseTwo("hey my name is anas"));
 ```
+
 ```jsx
 // solution 3
 const reverse = (str) => {
   let reversed = "";
-  for (let char of str){
-reversed = char + reversed;
+  for (let char of str) {
+    reversed = char + reversed;
   }
-return reversed
-}
-console.log(reverse("khan"))
+  return reversed;
+};
+console.log(reverse("khan"));
 ```
+
 ```jsx
 // solution 3
 const reverseThree = (str) => {
@@ -2945,7 +2957,9 @@ const checkStringsAnagram = (str1, str2) => {
 };
 checkStringsAnagram("Mary", "Army");
 ```
+
 ## 156 palindrom
+
 ```jsx
 // solution 1
 const palindrome = (str) => {
@@ -2956,6 +2970,7 @@ console.log(palindrome("adhdjbba"));
 console.log(palindrome("anas"));
 console.log(palindrome("abcba"));
 ```
+
 ```jsx
 // solution 2
 const palindromeTwo = (str) => {
@@ -2968,7 +2983,9 @@ console.log(palindromeTwo("adhdjbba"));
 console.log(palindromeTwo("anas"));
 console.log(palindromeTwo("abcba"));
 ```
-## 157 integer reversal 
+
+## 157 integer reversal
+
 ```jsx
 // integer reversal
 const reversInt = (num) => {
@@ -2987,8 +3004,11 @@ console.log(reversInt(-900));
 console.log(reversInt(00));
 console.log(reversInt(001));
 ```
-## 158 MaxChars 
+
+## 158 MaxChars
+
 // MaxChars
+
 ```jsx
 const str2 = "hello 1 js 2 es5, es6, es7 react ninjas";
 let obj = {};
@@ -3009,8 +3029,29 @@ const countChars = (str) => {
   return maxChar;
 };
 countChars(str2);
-console.log(obj); 
+console.log(obj);
 console.log(max);
 console.log(maxChar);
+```
 
+// fizzbuzz
+
+## 159 FizzBuzz
+
+```jsx
+const fizzBuzz = (n) => {
+  for (let i = 1; i <= n; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("fizzbuzz");
+    } else if ((i % 3 === 0, i)) {
+      console.log("fizz");
+    } else if (i % 5 === 0) {
+      console.log("buzz");
+    } else {
+      console.log(i);
+    }
+  }
+};
+
+fizzBuzz(100);
 ```
