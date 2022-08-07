@@ -3052,6 +3052,47 @@ const fizzBuzz = (n) => {
     }
   }
 };
-
 fizzBuzz(100);
+```
+
+## 160 chunkArray
+
+# solution 1
+
+```jsx
+const chunkArray = (arr, size) => {
+  const chunked = [];
+  for (let element of arr) {
+    const last = chunked[chunked.length - 1];
+    if (!last || last.length === size) {
+      chunked.push([element]);
+    } else {
+      last.push(element);
+    }
+  }
+
+  return chunked;
+};
+```
+
+# solution 2
+
+```jsx
+const chunkArray = (arr, size) => {
+  const chunked = [];
+  let index = 0;
+
+  while (index < arr.length) {
+    chunked.push(arr.slice(index, index + size));
+    index += size;
+  }
+
+  return chunked;
+};
+
+console.log(chunkArray([1, 2, 3, 4], 2));
+console.log(chunkArray([1, 2, 3, 4, 5], 2));
+console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8], 3));
+console.log(chunkArray([1, 2, 3, 4], 4));
+console.log(chunkArray([1, 2, 3, 4, 5], 10));
 ```
