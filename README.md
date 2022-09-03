@@ -3096,3 +3096,16 @@ console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8], 3));
 console.log(chunkArray([1, 2, 3, 4], 4));
 console.log(chunkArray([1, 2, 3, 4, 5], 10));
 ```
+
+## 161 Write a function for groupBy the values
+
+```jsx
+const Item = [
+  { name: "bananas", type: "fruit" },
+  { name: "cherriew", type: "fruit" },
+  { name: "bananas", type: "fruit" },
+
+  { name: "goat", type: "meat" },
+  { name: "Pizza", type: "JunkFood" },
+];
+```
