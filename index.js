@@ -14,14 +14,3 @@
 //     }
 //   };
 // })();
-
-const Item = [
-  { name: "bananas", type: "fruit" },
-  { name: "cherriew", type: "fruit" },
-  { name: "bananas", type: "fruit" },
-
-  { name: "goat", type: "meat" },
-  { name: "Pizza", type: "JunkFood" },
-];
-
-//  GroupBy function

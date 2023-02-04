@@ -3100,12 +3100,17 @@ console.log(chunkArray([1, 2, 3, 4, 5], 10));
 ## 161 Write a function for groupBy the values
 
 ```jsx
-const Item = [
-  { name: "bananas", type: "fruit" },
-  { name: "cherriew", type: "fruit" },
-  { name: "bananas", type: "fruit" },
-
-  { name: "goat", type: "meat" },
-  { name: "Pizza", type: "JunkFood" },
+//  GroupBy function
+const people = [
+  { name: "John", age: 20 },
+  { name: "Jane", age: 25 },
+  { name: "Jim", age: 30 },
+  { name: "Joan", age: 20 },
 ];
+const groupedByAge = people.reduce((acc, curr) => {
+  debugger;
+  (acc[curr.age] = acc[curr.age] || []).push(curr);
+  return acc;
+}, {});
+console.log(groupedByAge); // { 20: [ { name: 'John', age: 20 }, { name: 'Joan', age: 20 } ], 25: [ { name: 'Jane', age: 25 } ], 30: [ { name: 'Jim', age: 30 } ] }
 ```
