@@ -1,7 +1,5 @@
 # javascript-algorithm
 
-
-
 ## Table of Contents
 
 - [1 print 20 event no. not start from zero](#1-print-20-event-no-not-start-from-zero1)
@@ -3115,4 +3113,40 @@ const groupedByAge = people.reduce((acc, curr) => {
   return acc;
 }, {});
 console.log(groupedByAge); // { 20: [ { name: 'John', age: 20 }, { name: 'Joan', age: 20 } ], 25: [ { name: 'Jane', age: 25 } ], 30: [ { name: 'Jim', age: 30 } ] }
+```
+
+## 162 Sentence captialization
+
+```jsx
+// Solution 1
+//  Sentence captialization
+
+const capitalize = (str) => {
+  const words = [];
+  str.split(" ").forEach((word) => {
+    words.push(word.charAt(0).toUpperCase() + word.slice(1));
+  });
+  return words.join(" ");
+};
+
+console.log(capitalize("hey anas khan"));
+```
+
+```jsx
+// Solution 2
+//  Sentence captialization
+
+const capitalize = (str) => {
+  let results = str[0].toUpperCase();
+  for (let i = 1; i < str.length; i++) {
+    if (str[i - 1] === " ") {
+      results += str[i].toUpperCase();
+    } else {
+      results += str[i];
+    }
+  }
+  return results;
+};
+
+console.log(capitalize("hey anas khan"));
 ```
