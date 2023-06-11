@@ -3150,3 +3150,46 @@ const capitalize = (str) => {
 
 console.log(capitalize("hey anas khan"));
 ```
+
+## 163 Search Vowels
+
+```jsx
+// Solution 1
+//  Search Vowels
+
+const searchVowels = (str) => {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (
+      str[i] === "a" ||
+      str[i] === "e" ||
+      str[i] === "i" ||
+      str[i] === "o" ||
+      str[i] === "u"
+    ) {
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log(searchVowels("My name is Anas Khan"));
+```
+
+```jsx
+// Solution 1
+//  Search Vowels
+
+const searchVowels = (str) => {
+  let count = 0;
+  const vowelsChecker = ["a", "e", "i", "o", "u"];
+  for (let char of str.toLowerCase()) {
+    if (vowelsChecker.includes(char)) {
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log(searchVowels("My name is Anas Khan"));
+```
