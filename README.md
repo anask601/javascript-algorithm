@@ -3193,3 +3193,66 @@ const searchVowels = (str) => {
 
 console.log(searchVowels("My name is Anas Khan"));
 ```
+
+## 164 Matrix Spiral
+
+```jsx
+// Solution 1
+//  Matrix Spiral
+
+const matrixSpiral = (matrix) => {
+  if (matrix.length === 0) {
+    return [];
+  }
+
+  const rows = matrix.length;
+  const cols = matrix[0].length;
+  let startRow = 0;
+  let endRow = rows - 1;
+  let startCol = 0;
+  let endCol = cols - 1;
+  const result = [];
+
+  while (startRow <= endRow && startCol <= endCol) {
+    // Traverse right
+    for (let col = startCol; col <= endCol; col++) {
+      result.push(matrix[startRow][col]);
+    }
+    startRow++;
+
+    // Traverse down
+    for (let row = startRow; row <= endRow; row++) {
+      result.push(matrix[row][endCol]);
+    }
+    endCol--;
+
+    // Traverse left
+    if (startRow <= endRow) {
+      for (let col = endCol; col >= startCol; col--) {
+        result.push(matrix[endRow][col]);
+      }
+      endRow--;
+    }
+
+    // Traverse up
+    if (startCol <= endCol) {
+      for (let row = endRow; row >= startRow; row--) {
+        result.push(matrix[row][startCol]);
+      }
+      startCol++;
+    }
+  }
+
+  return result;
+};
+
+// Example usage:
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+const spiralTraversal = matrixSpiral(matrix);
+console.log(spiralTraversal); // Output: [1, 2, 3, 6, 9, 8, 7, 4, 5]
+```
